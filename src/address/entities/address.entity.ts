@@ -1,7 +1,7 @@
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
 @Entity({name:'address'})
-export class UserEntity {
+export class AddressEntity {
     @PrimaryGeneratedColumn('rowid')
     id: number;
 
@@ -11,7 +11,7 @@ export class UserEntity {
     @Column({name: 'complement', nullable: true})
     complement: string;
 
-    @Column({name: 'number'})
+    @Column({name: 'number', nullable: false})
     numberAddress: number;
 
     @Column({name: 'cep', nullable: false})
