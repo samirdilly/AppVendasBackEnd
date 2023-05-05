@@ -8,12 +8,7 @@ import { CacheModule } from 'src/cache/cache.module';
 
 
 @Module({
-  imports:[ 
-    CacheModuleNest.register({
-    ttl:9000000000,
-  }), 
-  CacheModule,
-  TypeOrmModule.forFeature([CityEntity])],
+  imports:[CacheModule,TypeOrmModule.forFeature([CityEntity])],
   controllers: [CityController],
   providers: [CityService]
 })
